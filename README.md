@@ -1,1 +1,1 @@
-# HTML_CSS_Modulul 3 - Lectia 5 - Modelul Cutiei
+# HTML_CSS_Modulul 3 - Lectia 6 - Flexbox
