@@ -42,8 +42,9 @@ body{
 
 .header{
     background-color: #303030;
-   padding-top: 30px;
-   margin-bottom: -86px;
+    padding-top: 30px;
+    margin-bottom: -86px;
+
   
 }
 .header .container{
@@ -104,11 +105,22 @@ body{
     background-color: var(--orange);
     color: var(--white);
 }
+.button:focus{
+    background-color: var(--orange);
+    color: var(--white);
+
+}
 
 /* Hero section style */
 
 .hero-section{
-    background-color: #303030;
+    background-image: linear-gradient(180deg,
+    rgba(25, 28, 38,0.3),
+    rgba(25, 28, 38,0.8)
+    ), url(../img/hero-bg-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -126,9 +138,20 @@ body{
     font-weight: 600;
     line-height: 14px;
     color: var(--light-black);
+    text-transform: uppercase;
     margin-bottom: 20px;
+}
+.hero-section__subtitle::before{
+    content: '';
+    width: 80px;
+    height: 2px;
+    background-color: var(--light-black);
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: middle;
 
 }
+
 .hero-section__title{
     font-family: var(--secondary-font);
     font-size: 72px;
@@ -151,7 +174,9 @@ body{
 .about{
     margin-top: 130px;
     margin-bottom: 130px;
+
 }
+
 .about .container{
     display: flex;
     justify-content: space-between;
@@ -166,6 +191,17 @@ body{
     color: var(--black);
     margin-bottom: 20px;
     letter-spacing: 0.1em;
+}
+
+.about__subtitle::before{
+    content: '';
+    width: 80px;
+    height: 2px;
+    background-color: var(--black);
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: middle;
+
 }
 
 .about__images{
@@ -222,10 +258,20 @@ body{
 
 
 /* Services section style*/
+.srvices__container{
+    display: flex;
+}
 .services{
     background-color: var(--black);
+    background-image: radial-gradient(circle at bottom left, rgba(255, 108, 0, 0.2),
+    rgba(255, 108, 0, 0.3)
+    ), url(../img/hero-bg-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
     color: var(--light-black);
     padding: 0 55px;
+    height: 700px;
 }
 
 .services-subtitle{
@@ -242,11 +288,17 @@ body{
     font-weight: 700;
     line-height: 50px;
     color: var(--white);
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .services-list{
-    background: linear-gradient(180deg, #171a24 0%, rgba());
+    background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, .02) 100%);
+    padding: 28px 38px;
+    flex: 1;
+
 }
+
 
 .services-item{
 
@@ -256,14 +308,15 @@ body{
     font-size: 18px;
     font-weight: 400;
     line-height: 30px;
+    margin-bottom: 20px;
 }
 
 .services-button{
     font-family: var(--primary-font);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 12px;
     line-height: 16px;
-    background-color: var(--orange);
+    background-color: transparent;
     color: var(--white);
     text-transform: uppercase;
     padding: 12px 24px;
@@ -271,20 +324,33 @@ body{
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid var(--orange);
 }
 
 .services-button:hover{
-    background-color: transparent;
-    color: var(--orange);
+    background-color: var(--orange);
+    color: var(--white);
+    border: 1px solid var(--orange);
 }
 
 .services-button:focus{
-    background-color: transparent;
-    color: var(--orange);
+    background-color: var(--orange);
+    color: var(--white);
+    border: 1px solid var(--orange);
+
 }
 
 /* Statistics section style*/
-.statistics{
+.statistics .container{
+    display: flex;
+    gap 64px;
+    padding: 180px 0;
+}
+.statistics-list{
+    flex: 1;
 
 }
 
@@ -322,6 +388,8 @@ body{
     font-size: 42px;
     font-weight: 700;
     line-height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .statistics-text{
     font-size: 18px;
@@ -330,12 +398,19 @@ body{
 }
 
 .statistics-testimonial{
+    flex: 1;
 
 }
 
 /* Barbers section style*/
 .barbers{
     background-color: #f7f7f7;
+    padding: 180px 0;
+}
+.barbers-container{
+    display: flex;
+    gap: 30px;
+    text-align: center;
 }
 .barbers-subtitle{
     font-size: 11px;
@@ -349,6 +424,8 @@ body{
     font-size: 42px;
     font-weight: 700;
     line-height: 50px;
+    margin-top: 20px;
+    margin-bottom: 44px;
 }
 
 .barbers-card{
@@ -358,6 +435,8 @@ body{
 .barbers-name{
     font-size: 18px;
     font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 8px;
 }
 
 .barbers-role{
@@ -368,15 +447,30 @@ body{
 /* Place section style*/
 .place{
     color: var(--black);
+    margin: 180px 0;
+}
+.place-images{
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
 }
 .place-subtitle{
     text-transform: uppercase;
     font-size: 11px;
     font-weight: 600;
     line-height: 14px;
+    letter-spacing: 0.1em;
+    margin-bottom: 44px;
 }
 /* Footer section style*/
 .footer{
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 56px;
+    padding-bottom: 56px;
 
 }
 
@@ -387,6 +481,9 @@ body{
 }
 
 .footer-social{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
 
 }
 
